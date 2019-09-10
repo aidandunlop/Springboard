@@ -1,0 +1,43 @@
+version: '2'
+services:
+
+   app:
+     image: docker4data/talkvoter:prod-1.0.1
+     build:
+       context: ./
+       dockerfile: talkvoter/Dockerfile
+     command: /app/docker-utils/run-app.sh
+     volumes:
+       - .:/app/proj/
+       - static-volume:/app/htdocs/static/
+     environment:
+       - DATABASE_URL=postgres://postgres@db/postgres
+       - SITE_DIR=/app/
+       - SECRET_KEY=super secret key
+       - PREDICT_ENDPOINT=http://predict:8000/predict/
+     depends_on:
+       - db
+
+   predict:
+     image: docker4data/predict_api:prod-1.0.1
+     build:
+       context: ./
+       dockerfile: predict_api/Dockerfile
+     command: /app/docker-utils/run-predict.sh
+     volumes:
+       - .:/app/proj/
+       - static-volume:/app/htdocs/static/
+     environment:
+       - SITE_DIR=/app/
+     depends_on:
+       - app
+
+   db:
+     image: postgres:10-alpine
+     volumes:
+       - pgdata:/var/lib/postgresql/data/
+
+
+volumes:
+  static-volume:
+  pgdata:
