@@ -1,0 +1,7 @@
+columns:
+- timestamp
+- organization_type
+- country_residence
+- country_citizenship
+- finaid_need
+filename: finaid-applications.csv

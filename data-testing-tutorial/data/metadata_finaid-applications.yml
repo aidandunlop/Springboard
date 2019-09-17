@@ -1,0 +1,35 @@
+columns: !!python/object/apply:pandas.core.indexes.base._new_Index
+- !!python/name:pandas.core.indexes.base.Index ''
+- data: !!python/object/apply:numpy.core.multiarray._reconstruct
+    args:
+    - !!python/name:numpy.ndarray ''
+    - !!python/tuple
+      - 0
+    - !!binary |
+      Yg==
+    state: !!python/tuple
+    - 1
+    - !!python/tuple
+      - 5
+    - !!python/object/apply:numpy.dtype
+      args:
+      - O8
+      - 0
+      - 1
+      state: !!python/tuple
+      - 3
+      - '|'
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 63
+    - false
+    - - timestamp
+      - organization_type
+      - country_residence
+      - country_citizenship
+      - finaid_need
+  name: null
+filename: finaid-applications.csv
