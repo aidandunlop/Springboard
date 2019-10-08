@@ -1,0 +1,40 @@
+{
+  "dataset_data": {
+    "limit": null,
+    "transform": null,
+    "column_index": null,
+    "column_names": [
+      "Date",
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Change",
+      "Traded Volume",
+      "Turnover",
+      "Last Price of the Day",
+      "Daily Traded Units",
+      "Daily Turnover"
+    ],
+    "start_date": "2019-04-11",
+    "end_date": "2019-04-11",
+    "frequency": "daily",
+    "data": [
+      [
+        "2019-04-11",
+        null,
+        72.6,
+        71.25,
+        71.4,
+        null,
+        145887.0,
+        10446345.0,
+        null,
+        null,
+        null
+      ]
+    ],
+    "collapse": null,
+    "order": null
+  }
+}
