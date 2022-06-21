@@ -1,6 +1,6 @@
 Flask==0.12.2
 Flask_RESTful==0.3.6
-numpy==1.14.2
+numpy==1.22.0
 pandas==0.22.0
 python-dateutil==2.7.2
 pytz==2018.4
